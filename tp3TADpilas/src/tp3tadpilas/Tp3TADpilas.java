@@ -32,7 +32,16 @@ public class Tp3TADpilas {
         
         for(int i = 0; i<=4;i++){
         p1.push(i);
+            System.out.println(p1);
         }
+        p1.push(54);
+        System.out.println(p1);
+        System.out.println(p1.verElemento());
+        System.out.println(p1.pop()); 
+        System.out.println(p1);
+        System.out.println(p1.pilaVacia());
+        System.out.println(p1.PilaLlena());
+        
         
     }
     

@@ -25,6 +25,11 @@ elementos invertidos
  */
 public class Pila {
     private ArrayList<Integer> pila;
+
+    public Pila() {
+        this.pila = new ArrayList<Integer>();
+    }
+    
     //    private Stack<Integer> test;
     
     public void push(int entero){
@@ -44,6 +49,11 @@ public class Pila {
     }
     public int verElemento(){
         return pila.getLast();
+    }
+
+    @Override
+    public String toString() {
+        return "Pila {" + pila + '}';
     }
     
 
