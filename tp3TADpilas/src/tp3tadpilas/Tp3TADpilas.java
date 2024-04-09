@@ -31,6 +31,12 @@ public class Tp3TADpilas {
         int tamanio = 4;
         Pila p1 = new Pila(4);
         
+        System.out.println(p1.pilaVacia());
+        System.out.println(p1.PilaLlena());
+        p1.pop();
+        System.out.println(p1);
+        p1.verElemento();
+        
         for(int i = 0; i< tamanio;i++){
         p1.push(i);
             System.out.println(p1);
@@ -38,13 +44,15 @@ public class Tp3TADpilas {
         System.out.println(p1.PilaLlena());
         System.out.println("-----------------");
         p1.push(54);
-        System.out.println(p1);
-        System.out.println(p1.verElemento());
-        System.out.println(p1.pop()); 
+        System.out.println(p1);      
+        p1.verElemento();       
+        p1.pop(); 
         System.out.println(p1);
         System.out.println(p1.pilaVacia());
         System.out.println(p1.PilaLlena());
-        
+        p1.push(54);
+        System.out.println(p1);
+        System.out.println(p1.PilaLlena());
         
     }
     

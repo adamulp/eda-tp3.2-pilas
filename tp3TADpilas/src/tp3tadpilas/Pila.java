@@ -37,15 +37,15 @@ public class Pila {
     public void push(int entero){
         if(!PilaLlena()){
             pila.add(entero);
-        }else{System.out.println("La pila está llena y no se puede agregar mas elementos");}
+        }else{System.out.println("La pila esta llena y no se puede agregar mas elementos");}
     }
     public Integer pop(){
-        int retorno = verElemento();
         if(!pilaVacia()){
+            int retorno = verElemento();
             pila.removeLast();
             return retorno;
         }
-        System.out.println("La pila está vacía y no se puede quitar mas elementos");
+        System.out.println("La pila esta vacia y no se puede quitar mas elementos");
         return null;
         
 //        return pila.get(pila.size()-1);
@@ -59,15 +59,19 @@ public class Pila {
     }
     public Integer verElemento(){
         if(!pilaVacia()){
+            System.out.println(pila.getLast());
               return pila.getLast();
         }
-        System.out.println("La pila está vacía y no se puede quitar mas elementos");
+        System.out.println("La pila esta vacia y no se puede quitar mas elementos");
         return null;
     }
 
     @Override
     public String toString() {
+        if(!pilaVacia()){
         return "Pila {" + pila + '}';
+        }
+        return "";
     }
     
 
