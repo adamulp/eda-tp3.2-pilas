@@ -28,12 +28,15 @@ public class Tp3TADpilas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Pila p1 = new Pila();
+        int tamanio = 4;
+        Pila p1 = new Pila(4);
         
-        for(int i = 0; i<=4;i++){
+        for(int i = 0; i< tamanio;i++){
         p1.push(i);
             System.out.println(p1);
         }
+        System.out.println(p1.PilaLlena());
+        System.out.println("-----------------");
         p1.push(54);
         System.out.println(p1);
         System.out.println(p1.verElemento());

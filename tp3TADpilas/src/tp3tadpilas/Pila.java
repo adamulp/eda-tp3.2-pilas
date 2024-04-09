@@ -25,30 +25,44 @@ elementos invertidos
  */
 public class Pila {
     private ArrayList<Integer> pila;
+    private int size;
 
-    public Pila() {
+    public Pila(int size) {
         this.pila = new ArrayList<Integer>();
+        this.size = size;
     }
     
     //    private Stack<Integer> test;
     
     public void push(int entero){
-        pila.add(entero);
+        if(!PilaLlena()){
+            pila.add(entero);
+        }else{System.out.println("La pila está llena y no se puede agregar mas elementos");}
     }
-    public int pop(){
+    public Integer pop(){
         int retorno = verElemento();
-        pila.removeLast();
-        return retorno;
+        if(!pilaVacia()){
+            pila.removeLast();
+            return retorno;
+        }
+        System.out.println("La pila está vacía y no se puede quitar mas elementos");
+        return null;
+        
 //        return pila.get(pila.size()-1);
     }
     public boolean pilaVacia(){
         return pila.isEmpty();
     }
     public boolean PilaLlena(){
-        return !pilaVacia();
+        return pila.size() == this.size;
+
     }
-    public int verElemento(){
-        return pila.getLast();
+    public Integer verElemento(){
+        if(!pilaVacia()){
+              return pila.getLast();
+        }
+        System.out.println("La pila está vacía y no se puede quitar mas elementos");
+        return null;
     }
 
     @Override
