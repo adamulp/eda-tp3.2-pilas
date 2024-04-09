@@ -65,6 +65,14 @@ public class Pila {
         System.out.println("La pila esta vacia y no se puede quitar mas elementos");
         return null;
     }
+    
+    public Pila invierteEficiente(){
+        Pila p2 = new Pila(this.size);
+        for (int i = 0; i < this.size; i++) {
+            p2.push(pop());
+        }
+        return p2;
+    }
 
     @Override
     public String toString() {
