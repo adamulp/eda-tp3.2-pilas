@@ -73,6 +73,20 @@ public class Pila {
         }
         return p2;
     }
+    
+    public void invierteSimple(){
+        Pila p2 = new Pila(this.size);
+        Pila p3 = new Pila(this.size);
+        for(int i = 0; i < this.size; i++){
+            p2.push(pop());
+        }
+        for(int i=0; i< this.size; i++){
+            p3.push(p2.pop());
+        }
+        for(int i=0; i< this.size; i++){
+            push(p3.pop());
+        }
+    }
 
     @Override
     public String toString() {

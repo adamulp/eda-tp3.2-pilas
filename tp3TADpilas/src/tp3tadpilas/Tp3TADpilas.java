@@ -54,8 +54,15 @@ public class Tp3TADpilas {
         System.out.println(p1);
         System.out.println(p1.PilaLlena());
         
+        
+        
         System.out.println("-----------------");
-        System.out.println("Pila invertida");
+        System.out.println("Pila invertida (simple):");
+        p1.invierteSimple();
+        System.out.println(p1);
+        
+        System.out.println("-----------------");
+        System.out.println("Pila invertida (eficiente):");
         Pila p2 = p1.invierteEficiente();
         System.out.println(p2);
     }
