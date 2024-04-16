@@ -25,7 +25,7 @@ elementos invertidos
  */
 public class Pila {
     private Object[] pila;
-    private int size;
+    protected int size;
     private int cursor;
 
     public Pila(int size) {
